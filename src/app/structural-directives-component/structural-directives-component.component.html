@@ -1,0 +1,9 @@
+<div id="adminPanel" *ngIf="isAdmin">
+    <h3>admin panel</h3>
+    <div id="settings">
+        <h4>settings:</h4>
+        <ul>
+            <li *ngFor="let setting of settings">{{setting.name}}</li>
+        </ul>
+    </div>
+</div>

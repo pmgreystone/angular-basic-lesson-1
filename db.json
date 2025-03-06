@@ -1,0 +1,91 @@
+{
+    "users": [
+      {
+        "id": 1,
+        "uname": "jdoe",
+        "firstname": "John",
+        "lastname": "Doe",
+        "password": "password123"
+      },
+      {
+        "id": 2,
+        "uname": "asmith",
+        "firstname": "Alice",
+        "lastname": "Smith",
+        "password": "password456"
+      }
+    ],
+    "shifts": [
+      {
+        "id": 1,
+        "uid": 1,
+        "start": "2025-02-27T08:00:00Z",
+        "stop": "2025-02-27T16:00:00Z",
+        "detail": "Morning shift"
+      },
+      {
+        "id": 2,
+        "uid": 1,
+        "start": "2025-02-28T08:00:00Z",
+        "stop": "2025-02-28T16:00:00Z",
+        "detail": "Morning shift"
+      },
+      {
+        "id": 3,
+        "uid": 1,
+        "start": "2025-03-01T08:00:00Z",
+        "stop": "2025-03-01T16:00:00Z",
+        "detail": "Morning shift"
+      },
+      {
+        "id": 4,
+        "uid": 2,
+        "start": "2025-02-27T16:00:00Z",
+        "stop": "2025-02-28T00:00:00Z",
+        "detail": "Evening shift"
+      },
+      {
+        "id": 5,
+        "uid": 2,
+        "start": "2025-02-28T16:00:00Z",
+        "stop": "2025-02-29T00:00:00Z",
+        "detail": "Evening shift"
+      },
+      {
+        "id": 6,
+        "uid": 2,
+        "start": "2025-03-01T16:00:00Z",
+        "stop": "2025-03-02T00:00:00Z",
+        "detail": "Evening shift"
+      },
+      {
+        "id": 7,
+        "uid": 1,
+        "start": "2025-03-02T08:00:00Z",
+        "stop": "2025-03-02T16:00:00Z",
+        "detail": "Morning shift"
+      },
+      {
+        "id": 8,
+        "uid": 1,
+        "start": "2025-03-03T08:00:00Z",
+        "stop": "2025-03-03T16:00:00Z",
+        "detail": "Morning shift"
+      },
+      {
+        "id": 9,
+        "uid": 2,
+        "start": "2025-03-02T16:00:00Z",
+        "stop": "2025-03-03T00:00:00Z",
+        "detail": "Evening shift"
+      },
+      {
+        "id": 10,
+        "uid": 2,
+        "start": "2025-03-03T16:00:00Z",
+        "stop": "2025-03-04T00:00:00Z",
+        "detail": "Evening shift"
+      }
+    ]
+  }
+  

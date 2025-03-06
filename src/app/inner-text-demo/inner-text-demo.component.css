@@ -1,0 +1,9 @@
+div#inner-text-wrapper {
+    background-color: white;
+    width: 500px;
+    height: 400px;
+}
+div#click {
+    box-sizing: border-box;
+    border: 1px solid green;
+}

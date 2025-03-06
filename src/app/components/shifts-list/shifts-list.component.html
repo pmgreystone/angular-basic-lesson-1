@@ -1,0 +1,15 @@
+<div id="shifts_list">
+  <h4>shifts list</h4>
+
+  <div>
+    <label for="userId">enter user-id:</label>
+    <input id="userId" type="text" [(ngModel)]="userId" />
+    <input type="button" (click)="submitUserId()" value="submit" />
+  </div>
+
+  <ul>
+    <li *ngFor="let shift of getShifts()">
+      id#{{shift.id}}/uid#{{shift.uid}}: {{ shift.detail }} {{shift.start|date:'longDate'}}/{{shift.stop|date:'longDate'}}
+    </li>
+  </ul>
+</div>

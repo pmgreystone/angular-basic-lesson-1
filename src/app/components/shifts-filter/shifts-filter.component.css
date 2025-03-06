@@ -1,0 +1,13 @@
+div#shifts_filter {
+  display: flex;
+  box-sizing: border-box;
+  border: 1px solid white;
+  width: 300px;
+  height: 100%;
+  flex-direction: column;
+}
+div#date_filter_wrapper {
+  background-color: aqua;
+  box-sizing: border-box;
+  border: 1px solid rgb(87, 110, 110);
+}

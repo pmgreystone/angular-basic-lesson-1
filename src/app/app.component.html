@@ -1,0 +1,14 @@
+<!--
+<app-inner-text-demo/>
+-->
+<div id="wrapper">
+    <shifts-list/>
+    <shifts-filter (dateFilterRange)="dateFilterRangeUpdated($event)" />
+    <div>
+        <ul>
+            <li>startDate: {{startDate|date:'longDate'}}</li>
+            <li>endDate: {{endDate|date:'longDate'}}</li>
+        </ul>
+    </div>
+</div>
+

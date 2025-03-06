@@ -1,0 +1,9 @@
+.example-full-width {
+    width: 100%;
+}
+.debug-email {
+    height: 25px;
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid red;
+}

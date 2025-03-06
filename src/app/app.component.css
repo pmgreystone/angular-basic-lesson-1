@@ -1,0 +1,13 @@
+div#wrapper {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: rgba(30, 114, 150, 0.789);
+  box-sizing: border-box;
+  width: 95vw;
+  height: 95vh;
+  align-self: center;
+  margin: auto auto;
+  gap: 20px;
+}
