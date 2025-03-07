@@ -1,4 +1,0 @@
-<div id="shifts_filter">
-  <h4>shifts filter</h4>
-  <mat-calendar style="background-color: rgba(23, 155, 98, 0.656); color: white;" />
-</div>

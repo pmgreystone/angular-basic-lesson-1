@@ -2,12 +2,34 @@ div#shifts_filter {
   display: flex;
   box-sizing: border-box;
   border: 1px solid white;
-  width: 300px;
+  width: 350px;
   height: 100%;
   flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
+div#shifts_filter button {
+  margin-top: 5px;
+  padding: 2px;
+  height: 25px;
+  min-width: 60px;
+  width: 80%;
+}
+
 div#date_filter_wrapper {
   background-color: aqua;
   box-sizing: border-box;
   border: 1px solid rgb(87, 110, 110);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+mat-calendar {
+  min-width: 300px;
+  min-height: 400px;
+  align-items: normal;
+  text-align: left;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: black;
 }

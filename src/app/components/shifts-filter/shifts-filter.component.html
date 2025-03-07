@@ -1,9 +1,9 @@
 <div id="shifts_filter">
-  <h4>shifts filter</h4>
+  <h4>date-range filter</h4>
   <div id="date_filter_wrapper">
     <mat-calendar #calendar [(selected)]="selectedDateRange" (selectedChange)="rangeChanged($event)"></mat-calendar>
   </div>
-  <button *ngFor="let preset of presets" (click)="selectPreset(preset.range)">
+  <button button mat-flat-button *ngFor="let preset of presets" (click)="selectPreset(preset.range)">
     {{ preset.label }}
   </button>
 </div>

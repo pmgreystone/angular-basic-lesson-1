@@ -3,7 +3,7 @@ div#wrapper {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  background-color: rgba(30, 114, 150, 0.789);
+  background-color: rgba(30, 114, 150, 0.946);
   box-sizing: border-box;
   width: 95vw;
   height: 95vh;

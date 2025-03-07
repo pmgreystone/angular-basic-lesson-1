@@ -1,18 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ShiftsService } from '../../services/shifts.service';
 import { OnInit } from '@angular/core';
 import { Shift } from '../../../models';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'shifts-list',
   standalone: true,
-  imports: [CommonModule,FormsModule],
+  imports: [CommonModule, FormsModule, MatButtonModule],
   templateUrl: './shifts-list.component.html',
   styleUrl: './shifts-list.component.css',
 })
 export class ShiftsListComponent implements OnInit {
+  @Input() startDate: Date | undefined;
+  @Input() endDate: Date | undefined;
   private shifts: Partial<Shift>[];
   private filteredShifts: Partial<Shift>[];
   userId: string = "";
@@ -42,7 +45,7 @@ export class ShiftsListComponent implements OnInit {
     });
   }
 
-  submitUserId() {
+  applyFilter() {
     const id = this.userId;
     if (id) {
       if (parseInt(id, 10) > 0) {
@@ -50,6 +53,17 @@ export class ShiftsListComponent implements OnInit {
         this.filteredShifts = this.shifts.filter(x => x.uid === intId);
       }
     }
+    if (this.startDate && this.endDate) {
+      this.filteredShifts = this.filterByDates(this.filteredShifts, this.startDate, this.endDate);
+    }
+  }
+
+  filterByDates(shifts: Partial<Shift>[], startDate: Date, endDate: Date) {
+    return shifts.filter(
+      x =>
+        (new Date(Date.parse(x.start!)) >= startDate) &&
+        (new Date(Date.parse(x.stop!)) <= endDate)
+    )
   }
 
   getShifts(): Partial<Shift>[] {

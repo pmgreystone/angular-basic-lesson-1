@@ -5,7 +5,7 @@ import { ReactiveFormsModule, FormBuilder, FormGroup, FormControl } from '@angul
 import { DefaultMatCalendarRangeStrategy, MatRangeDateSelectionModel } from '@angular/material/datepicker';
 import { DateRange } from '@angular/material/datepicker';
 import { CommonModule } from '@angular/common';
-
+import { MatButtonModule } from '@angular/material/button';
 import { Output, EventEmitter } from '@angular/core';
 
 
@@ -14,7 +14,7 @@ import { Output, EventEmitter } from '@angular/core';
   selector: 'shifts-filter',
   standalone: true,
   providers: [DefaultMatCalendarRangeStrategy, MatRangeDateSelectionModel],
-  imports: [MatDatepickerModule, MatNativeDateModule, ReactiveFormsModule, CommonModule],
+  imports: [MatDatepickerModule, MatNativeDateModule, ReactiveFormsModule, CommonModule, MatButtonModule],
   templateUrl: './shifts-filter.component.html',
   styleUrl: './shifts-filter.component.css',
 })
@@ -67,7 +67,7 @@ export class ShiftsFilterComponent {
       presetDateRange.end
     );
 
-    this.dateFilterRange.emit([presetDateRange.start,presetDateRange.end]);
+    this.dateFilterRange.emit([presetDateRange.start, presetDateRange.end]);
 
     if (presetDateRange.start && this.calendar)
       this.calendar._goToDateInView(presetDateRange.start, 'month');
@@ -86,6 +86,6 @@ export class ShiftsFilterComponent {
       newSelection.end
     );
     if (newSelection.start && newSelection.end)
-      this.dateFilterRange.emit([newSelection.start,newSelection.end]);
+      this.dateFilterRange.emit([newSelection.start, newSelection.end]);
   }
 }

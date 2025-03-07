@@ -5,11 +5,76 @@ div#shifts_list {
   width: 450px;
   height: 100%;
   flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
-ul {
+
+#list>li {
+  border-bottom: 1px solid #3f51b5;
+}
+
+div#shifts_list>ul {
   list-style-type: none;
+  height: 300px;
+  overflow-y: auto;
 }
-ul > li {
+
+ul>li {
   padding: 0;
   margin: 0;
+}
+
+div#filter_userid {
+  width: 70%;
+  display: block;
+  margin-top: 10px;
+  box-sizing: border-box;
+}
+
+div#filter_userid>ul {
+  list-style-type: none;
+}
+
+div#filter_userid>input {
+  width: 100%;
+  height: 20px;
+}
+
+div#filter_date {
+  width: 70%;
+  display: block;
+  margin-top: 10px;
+  box-sizing: border-box;
+}
+
+div#filter_date li {
+  margin-top: 5px;
+}
+
+div#filter_date i {
+  color: #3f51b5;
+  background-color: white;
+  padding: 4px;
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 2px;
+}
+
+div#filter_date b {
+  color: #e5e7f4;
+  padding: 2px;
+  display: block;
+}
+
+div#filter_date>ul {
+  list-style-type: none;
+}
+
+div#filter_date>button {
+  width: 100%;
+  height: 25px;
+  padding: 2px;
+  min-width: 60px;
+  margin-top: 10px;
 }
