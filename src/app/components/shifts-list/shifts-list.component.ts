@@ -5,6 +5,7 @@ import { Shift } from '../../../models';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
+import moment from 'moment-timezone';
 
 @Component({
   selector: 'shifts-list',
@@ -59,10 +60,22 @@ export class ShiftsListComponent implements OnInit {
   }
 
   filterByDates(shifts: Partial<Shift>[], startDate: Date, endDate: Date) {
+    const tz = 'America/Vancouver'
+    let mStartDate = moment.tz(startDate,tz);
+    let mEndDate = moment.tz(endDate,tz);
+    mEndDate = mEndDate.add(1,'d');
     return shifts.filter(
-      x =>
-        (new Date(Date.parse(x.start!)) >= startDate) &&
-        (new Date(Date.parse(x.stop!)) <= endDate)
+      (x,idx)=> {
+        console.log(`idx: ${idx}`);
+        const cStart = moment.tz(x.start!,tz);
+        const cStop = moment.tz(x.stop!,tz);
+        console.log(cStart.toString());
+        console.log(cStop.toString());
+        const result =
+          (cStart >= mStartDate && cStart <= mEndDate) &&
+          (cStop >= mStartDate && cStop <= mEndDate);
+        return result;
+      }
     )
   }
 
